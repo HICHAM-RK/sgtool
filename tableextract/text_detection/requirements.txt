@@ -1,0 +1,9 @@
+opencv-python
+fastapi
+uvicorn[standard]
+python-multipart
+torch<2.0
+torchvision
+openmim
+ipykernel
+jupyter

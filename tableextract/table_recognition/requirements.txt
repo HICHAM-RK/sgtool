@@ -1,0 +1,14 @@
+opencv-python
+fastapi
+uvicorn[standard]
+python-multipart
+numpy
+pydantic
+pillow
+tqdm
+# Enhanced dependencies for borderless table detection
+torch>=1.9.0
+torchvision>=0.10.0
+transformers>=4.21.0
+timm>=0.6.0
+matplotlib
