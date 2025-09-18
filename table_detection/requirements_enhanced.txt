@@ -1,0 +1,19 @@
+# Existing dependencies
+opencv-python
+fastapi
+uvicorn[standard]
+python-multipart
+numpy
+pathlib
+
+# Enhanced dependencies for borderless table detection
+torch>=1.9.0
+torchvision>=0.10.0
+transformers>=4.21.0
+timm>=0.6.0
+matplotlib
+Pillow>=8.0.0
+
+# Optional: for CUDA support (uncomment if you have CUDA-enabled GPU)
+# torch>=1.9.0+cu111
+# torchvision>=0.10.0+cu111

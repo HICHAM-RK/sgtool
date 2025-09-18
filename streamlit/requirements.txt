@@ -1,0 +1,9 @@
+opencv-python<4.3
+numpy<2
+pydantic
+requests
+tqdm
+python_dotenv
+streamlit
+xlsxwriter
+openpyxl
