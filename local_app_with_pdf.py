@@ -21,12 +21,18 @@ sys.path.insert(0, os.path.join(current_dir, 'table_recognition'))
 
 from classes import read_tables_from_list, read_texts_from_list
 from utility import dump_excel, get_random_color, merge_text_table
-# Import the fallback text recognizer with better error handling
+# Import text recognizer with MD5 bypass for model compatibility
 try:
-    from text_recognition import TextRecognizer
+    from text_recognition_md5_bypass import TextRecognizer
+    print("✅ Using MD5 bypass TextRecognizer")
 except Exception as e:
-    print(f"Warning: Failed to import standard TextRecognizer: {e}")
-    from text_recognition_fallback import FallbackTextRecognizer as TextRecognizer
+    print(f"⚠️ MD5 bypass failed, trying standard: {e}")
+    try:
+        from text_recognition import TextRecognizer
+        print("✅ Using standard TextRecognizer")
+    except Exception as e2:
+        print(f"⚠️ Standard failed, using fallback: {e2}")
+        from text_recognition_fallback import FallbackTextRecognizer as TextRecognizer
 from table_recognition import TableRecognizer
 
 # Import PDF processor
